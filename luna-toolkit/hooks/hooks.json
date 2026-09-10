@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/tdd-guard.sh\""
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "i=$(cat); printf '%s' \"$i\" | grep -qE '\"command\"[[:space:]]*:[[:space:]]*\"[^\"]*(rm[[:space:]]+-[a-zA-Z]*[rR]|git[[:space:]]+push[[:space:]]+--force|git[[:space:]]+reset[[:space:]]+--hard|DROP[[:space:]]+TABLE)' && { echo 'BLOCKED: 위험한 명령어가 감지되었습니다' >&2; exit 2; }; exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}
