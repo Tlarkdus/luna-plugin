@@ -46,7 +46,8 @@ Claude Code 프롬프트에 두 줄 입력한다.
 
 ## changelog
 
-- **v0.2.1** — `plugin.json`에 `hooks` 선언 추가 (파일만 있으면 훅이 로드되지 않았다)
+- **v0.2.1** — `plugin.json`에 `hooks` 경로를 명시 (문서상 `hooks/hooks.json`은 자동 인식이며 둘은 병합된다.
+  훅 미발동 조사 중 추가한 것으로, 원인은 아니었다)
 - **v0.2.0** — wiki 3종·lab-onboard 스킬 이식, audit log 훅(PostToolUse) 추가
 - **v0.1.2** — 커맨드가 `${CLAUDE_PLUGIN_ROOT}`로 루브릭을 짚도록 수정
 - **v0.1.1** — repo-grade 출력 표에 총평 행 규칙 추가
