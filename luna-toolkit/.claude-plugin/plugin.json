@@ -1,5 +1,6 @@
 {
   "name": "luna-toolkit",
-  "version": "0.2.0",
-  "description": "LUNA Lab 팀 표준 도구 모음"
+  "version": "0.2.1",
+  "description": "LUNA Lab 팀 표준 도구 모음",
+  "hooks": "./hooks/hooks.json"
 }

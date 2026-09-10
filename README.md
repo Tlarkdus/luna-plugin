@@ -3,7 +3,7 @@
 LUNA Lab 팀 표준 도구를 배포하는 플러그인 마켓플레이스.
 
 - 매장(marketplace): `luna` — `.claude-plugin/marketplace.json`
-- 상품(plugin): `luna-toolkit` v0.2.0 — `luna-toolkit/.claude-plugin/plugin.json`
+- 상품(plugin): `luna-toolkit` v0.2.1 — `luna-toolkit/.claude-plugin/plugin.json`
 
 ## 설치 안내
 
@@ -46,6 +46,7 @@ Claude Code 프롬프트에 두 줄 입력한다.
 
 ## changelog
 
+- **v0.2.1** — `plugin.json`에 `hooks` 선언 추가 (파일만 있으면 훅이 로드되지 않았다)
 - **v0.2.0** — wiki 3종·lab-onboard 스킬 이식, audit log 훅(PostToolUse) 추가
 - **v0.1.2** — 커맨드가 `${CLAUDE_PLUGIN_ROOT}`로 루브릭을 짚도록 수정
 - **v0.1.1** — repo-grade 출력 표에 총평 행 규칙 추가
