@@ -3,7 +3,7 @@
 LUNA Lab 팀 표준 도구를 배포하는 플러그인 마켓플레이스.
 
 - 매장(marketplace): `luna` — `.claude-plugin/marketplace.json`
-- 상품(plugin): `luna-toolkit` v0.2.1 — `luna-toolkit/.claude-plugin/plugin.json`
+- 상품(plugin): `luna-toolkit` v0.2.2 — `luna-toolkit/.claude-plugin/plugin.json`
 
 ## 설치 안내
 
@@ -45,6 +45,10 @@ Claude Code 프롬프트에 두 줄 입력한다.
 ```
 
 ## changelog
+
+- **v0.2.2** — `hooks/hooks.json`이 유효한 JSON이 아니었다(audit 명령의 `\(`는 JSON에서 허용되지 않는
+  이스케이프). 파일이 통째로 버려져 v0.1.0 이후 **훅이 한 번도 로드된 적이 없었다.**
+  역슬래시가 필요 없는 `grep -o` + `sed`로 교체하고 로그 1줄을 300자로 자른다
 
 - **v0.2.1** — `plugin.json`에 `hooks` 경로를 명시 (문서상 `hooks/hooks.json`은 자동 인식이며 둘은 병합된다.
   훅 미발동 조사 중 추가한 것으로, 원인은 아니었다)
